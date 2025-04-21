@@ -2,111 +2,323 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Naiyo24 Pvt. Ltd.</title>
-  <link rel="stylesheet" href="style.css" />
+  <!-- AOS Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    <button id="backToTop" title="Back to Top">↑</button>
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+      color: #212529;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    header {
+      background: linear-gradient(120deg, #1d3557, #457b9d);
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.2);
+    }
+
+    header h1 { font-size: 2.5rem; }
+    nav { margin-top: 15px; }
+    nav a {
+      margin: 0 10px;
+      padding: 8px 16px;
+      background: #f1faee;
+      color: #1d3557;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #e63946;
+      color: white;
+      box-shadow: 0 0 12px #e63946;
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 60px 40px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #1d3557;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #457b9d;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: #1d3557;
+      color: white;
+      border-radius: 30px;
+      transition: 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background: #e63946;
+      box-shadow: 0 0 10px #e63946;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #1d3557;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: #a8dadc;
+      margin: 0 10px;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Naiyo24 Pvt. Ltd.</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#solutions">Startup Solutions</a></li>
-          <li><a href="#development">Web & App Development</a></li>
-          <li><a href="#hiring">Hiring</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+
+  <header data-aos="fade-down">
+    <h1>Naiyo24 Pvt. Ltd.</h1>
+    <p>"Affordable Digital Solutions for the Future"</p>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#startup">Startup</a>
+      <a href="#apps">Web & Apps</a>
+      <a href="#servers">Servers</a>
+      <a href="#hiring">Hiring</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h2>Affordable Digital Solutions for the Future</h2>
-    </div>
-  </section>
-
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>Our Projects</h2>
-      <div class="grid">
-        <div class="card">Nariii – Empowering Women Entrepreneurs</div>
-        <div class="card">Bhukk – Food Ordering & Restaurant Booking App</div>
-        <div class="card">OEMS24 – Ride-Hailing & Emergency Transport</div>
-        <div class="card">EduQuest247 – EdTech Platform</div>
-        <div class="card">SirfBill – Smart Billing System</div>
-        <div class="card">Luriana – Fashion & Lifestyle E-commerce</div>
+  <section id="projects" class="section" data-aos="fade-up">
+    <h2 class="section-title">Our Projects</h2>
+    <div class="card-container">
+      <div class="card" data-aos="zoom-in" style="background: #ffe4e1;">
+        <h3>👩‍💼 Nariii</h3>
+        <p>Empowering Women Entrepreneurs through micro-financing, marketplace integration, and mentorship programs.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" style="background: #fff3cd;">
+        <h3>🍽️ Bhukk</h3>
+        <p>Smart Restaurant Booking & On-Demand Food Ordering with real-time kitchen tracking.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" style="background: #e0f7fa;">
+        <h3>🚑 OEMS24</h3>
+        <p>Ride-Hailing, Ambulance Services & Emergency Transport with 24x7 support.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" style="background: #f3e5f5;">
+        <h3>🎓 EduQuest247</h3>
+        <p>Online platform for Education Loans, Scholarships, and Career-building Jobs.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" style="background: #d1f5d3;">
+        <h3>🧾 SirfBill</h3>
+        <p>Billing, POS & Inventory Management System for SMEs & Kirana Stores.</p>
+      </div>
+      <div class="card" data-aos="zoom-in" style="background: #fbe9e7;">
+        <h3>👗 Luriana</h3>
+        <p>Fashion & Lifestyle Marketplace with Personalized AI-based Recommendations.</p>
       </div>
     </div>
   </section>
+  
 
-  <section id="services" class="section">
-    <div class="container">
-      <h2>Our Services</h2>
-      <ul>
-        <li>✔ Domain Registration</li>
-        <li>✔ Web Hosting</li>
-        <li>✔ Business Email</li>
-      </ul>
+  <section id="services" class="section" data-aos="fade-up">
+    <h2 class="section-title">Our Services</h2>
+    <div class="card-container">
+      <div class="card" data-aos="flip-left" style="background: #e3f2fd;">
+        <h3>🌐 Domain Registration</h3>
+        <p>Secure your brand identity with WHOIS privacy, DNS management, and SSL-ready domains.</p>
+      </div>
+      <div class="card" data-aos="flip-left" style="background: #f1f8e9;">
+        <h3>☁️ Web Hosting</h3>
+        <p>Reliable Shared, VPS & Dedicated Hosting with 99.9% uptime and easy scaling for your business.</p>
+      </div>
+      <div class="card" data-aos="flip-left" style="background: #fff3e0;">
+        <h3>📧 Business Email</h3>
+        <p>Professional custom email addresses with advanced spam filtering, mobile access, and backups.</p>
+      </div>
+      <div class="card" data-aos="flip-left" style="background: #ede7f6;">
+        <h3>⚙️ Maintenance & Support</h3>
+        <p>Ongoing technical support, updates, bug fixes, and performance optimization for your digital assets.</p>
+      </div>
+      <div class="card" data-aos="flip-left" style="background: #fce4ec;">
+        <h3>📊 Analytics & SEO</h3>
+        <p>Drive growth through real-time tracking, competitor insights, and search engine optimization.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="startup" class="section" data-aos="fade-up">
+    <h2 class="section-title">Startup Solutions</h2>
+    <div class="card-container">
+      <div class="card" data-aos="fade-right" style="background: #f1f8e9;">
+        <h3>🚀 Basic Plan</h3>
+        <p>Get your startup registered with name, logo, and basic digital presence starting at just ₹25,000.</p>
+      </div>
+      <div class="card" data-aos="fade-up" style="background: #fff3e0;">
+        <h3>📦 Standard Plan</h3>
+        <p>Includes company formation, domain, website, email, and legal consultation – ₹50,000 only.</p>
+      </div>
+      <div class="card" data-aos="fade-left" style="background: #ede7f6;">
+        <h3>🏢 Premium Plan</h3>
+        <p>Full-stack business suite with app, analytics, hosting, and marketing. Custom pricing based on needs.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="apps" class="section" data-aos="fade-up">
+    <h2 class="section-title">Web & Mobile App Development</h2>
+    <div class="card-container">
+      <div class="card" data-aos="zoom-in-up" style="background: #e3f2fd;">
+        <h3>🖥️ Custom Websites</h3>
+        <p>Modern, responsive, and SEO-friendly websites tailored to your business and user experience.</p>
+      </div>
+      <div class="card" data-aos="zoom-in-up" style="background: #fce4ec;">
+        <h3>📱 Native Apps</h3>
+        <p>High-performance mobile apps built for Android, iOS, and cross-platform using Flutter & React Native.</p>
+      </div>
+      <div class="card" data-aos="zoom-in-up" style="background: #f1f8e9;">
+        <h3>⚡ Progressive Web Apps</h3>
+        <p>Fast, offline-ready PWAs with push notifications and app-like functionality directly from the web.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="servers" class="section" data-aos="fade-up">
+    <h2 class="section-title">Servers & Hosting</h2>
+    <div class="card-container">
+      <div class="card" data-aos="fade-up-right" style="background: #ede7f6;">
+        <h3>🛡️ Dedicated Servers</h3>
+        <p>Enterprise-grade servers for websites and apps demanding high security, uptime, and power.</p>
+      </div>
+      <div class="card" data-aos="fade-up" style="background: #e0f7fa;">
+        <h3>☁️ Cloud Hosting</h3>
+        <p>Elastic and scalable cloud infrastructure built for businesses of all sizes, with global CDN.</p>
+      </div>
+      <div class="card" data-aos="fade-up-left" style="background: #fce4ec;">
+        <h3>🔒 SSL & Backups</h3>
+        <p>End-to-end encryption with daily backups, disaster recovery, and real-time monitoring services.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="hiring" class="section" data-aos="fade-up">
+    <h2 class="section-title">We’re Hiring!</h2>
+    <div class="card-container">
+      <div class="card" data-aos="flip-up" style="background: #fff9c4;">
+        <h3>📱 Flutter Developer</h3>
+        <p>We're hiring passionate mobile app developers – internships, fresher roles & remote options.</p>
+      </div>
+      <div class="card" data-aos="flip-up" style="background: #c8e6c9;">
+        <h3>💻 Backend Developer</h3>
+        <p>Work with Flask or Node.js to power high-performing applications. Open to freshers and experts.</p>
+      </div>
+      <div class="card" data-aos="flip-up" style="background: #e1bee7;">
+        <h3>📢 Digital Marketing</h3>
+        <p>SEO, social media, content & analytics – join our growing marketing team for exciting campaigns.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="contact" class="section" data-aos="fade-up">
+    <h2 class="section-title">Contact Us</h2>
+    <div style="text-align: center;">
+      <p>Email: <a href="mailto:contact@naiyo24.com">contact@naiyo24.com</a></p>
+      <p>Phone: +91-XXXXXXXXXX</p>
+      <p>Address: Kolkata, India</p>
+      <a class="cta-btn" href="#top">Back to Top</a>
     </div>
   </section>
 
-  <section id="solutions" class="section">
-    <div class="container">
-      <h2>Startup Solutions</h2>
-      <p>Basic: ₹25,000 | Standard: ₹50,000 | Premium: Custom Quote</p>
-      <ul>
-        <li>✔ Company Registration</li>
-        <li>✔ Business Strategy</li>
-        <li>✔ Legal Compliance</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="development" class="section">
-    <div class="container">
-      <h2>Web & App Development</h2>
-      <ul>
-        <li>✔ Responsive Design</li>
-        <li>✔ SEO & Security</li>
-        <li>✔ Mobile & Web Apps</li>
-        <li>✔ 24/7 Support</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="hiring" class="section">
-    <div class="container">
-      <h2>We're Hiring!</h2>
-      <p>Roles Available: Flutter Dev, Backend Dev, Digital Marketing Intern, UI/UX Designer, and more!</p>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <input type="tel" placeholder="Your Phone" />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      <p>Email: contact@naiyo24.com | Phone: +91-XXXXXXXXXX</p>
-      <p>Location: Kolkata, India</p>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Naiyo24 Pvt. Ltd.</p>
-    </div>
+  <footer data-aos="fade-up">
+    <p>&copy; 2025 Naiyo24 Pvt. Ltd. All rights reserved.</p>
+    <p>
+      <a href="#">Terms</a> | 
+      <a href="#">Privacy</a> | 
+      <a href="#">Sitemap</a>
+    </p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>
+<div class="counter-section">
+  <div class="counter-box">
+    <h2 class="counter" data-target="500">0</h2>
+    <p>Clients Served</p>
+  </div>
+  <div class="counter-box">
+    <h2 class="counter" data-target="120">0</h2>
+    <p>Projects Completed</p>
+  </div>
+</div>
+<div class="tabs">
+  <div class="tab-buttons">
+    <button class="tab-btn active" data-tab="web">Web Development</button>
+    <button class="tab-btn" data-tab="mobile">Mobile Apps</button>
+    <button class="tab-btn" data-tab="hosting">Hosting</button>
+  </div>
+  <div class="tab-content active" id="web">
+    <p>We build fast, responsive websites and web apps.</p>
+  </div>
+  <div class="tab-content" id="mobile">
+    <p>High-quality Android and iOS app solutions.</p>
+  </div>
+  <div class="tab-content" id="hosting">
+    <p>Reliable cloud and server hosting packages.</p>
+  </div>
+</div>
+<img src="project1.jpg" class="preview-img" alt="project" />
+
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-img" id="lightbox-img">
+</div>
