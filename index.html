@@ -1,3 +1,4 @@
+do the same for the html one too
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-    <button id="backToTop" title="Back to Top">↑</button>
+    <button id="backtoTop" title="Back to Top">↑</button>
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -270,7 +271,28 @@
       <a class="cta-btn" href="#top">Back to Top</a>
     </div>
   </section>
-
+  <section class="section" data-aos="fade-up" id="stats">
+    <h2 class="section-title">Our Impact</h2>
+    <div class="counter-section" style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap;">
+      <div class="counter-box" style="text-align: center;">
+        <h2 class="counter" data-target="500">0</h2>
+        <p>Clients Served</p>
+      </div>
+      <div class="counter-box" style="text-align: center;">
+        <h2 class="counter" data-target="120">0</h2>
+        <p>Projects Completed</p>
+      </div>
+      <div class="counter-box" style="text-align: center;">
+        <h2 class="counter" data-target="10">0</h2>
+        <p>Startups Supported</p>
+      </div>
+      <div class="counter-box" style="text-align: center;">
+        <h2 class="counter" data-target="20">0</h2>
+        <p>Team Members</p>
+      </div>
+    </div>
+  </section>
+  
   <footer data-aos="fade-up">
     <p>&copy; 2025 Naiyo24 Pvt. Ltd. All rights reserved.</p>
     <p>
@@ -288,6 +310,42 @@
       once: true
     });
   </script>
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    let animated = false;
+  
+    const animateCounters = () => {
+      if (animated) return;
+  
+      counters.forEach(counter => {
+        const update = () => {
+          const target = +counter.getAttribute('data-target');
+          const current = +counter.innerText;
+          const increment = Math.ceil(target / 100);
+  
+          if (current < target) {
+            counter.innerText = Math.min(current + increment, target);
+            setTimeout(update, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        update();
+      });
+  
+      animated = true;
+    };
+  
+    window.addEventListener('scroll', () => {
+      const section = document.getElementById('stats');
+      const sectionTop = section.getBoundingClientRect().top;
+  
+      if (sectionTop < window.innerHeight - 150) {
+        animateCounters();
+      }
+    });
+  </script>
+  
 </body>
 </html>
 <div class="counter-section">
